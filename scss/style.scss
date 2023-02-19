@@ -1,0 +1,95 @@
+*{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+}
+
+.button__main{
+    margin-left: 54px;
+    background: #000;
+    width: 134px;
+    height: 62px;
+    border-radius: 7px;
+    border: none;
+    color: #FEFEFE;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    &:hover{
+        background: #6e6e6e;
+    }
+}
+
+li{
+    cursor: pointer;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1720px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between
+}
+
+.subheader{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 50px;
+    letter-spacing: 0.06em;
+    position: relative;
+    width: max-content;
+    &::after{
+        position: absolute;
+        content: url(../images/promovector.svg);
+        right: -7px;
+        top: 12px;
+        z-index: -1;
+    }
+}
+
+
+@media (max-width : 1700px){
+    .container{
+        padding: 0 15px;
+    }
+}
+
+@media (max-width : 1400px) {
+    .container{
+        flex-direction: column
+    }
+    .button__main{
+        font-size: 18px;
+        width: 100px;
+        height: 50px;
+    }
+}
+
+@media(max-width: 600px){
+    .subheader{
+        font-size: 34px;
+        margin: auto;
+        hyphens: auto
+    }
+}
+
+@import '../blocks/variables';
+@import '../blocks/header';
+@import '../blocks/header__promo';
+@import '../blocks/sponsors';
+@import '../blocks/catalog';
+@import '../blocks/sale';
+@import '../blocks/favorite';
+@import '../blocks/download';
+@import '../blocks/community';
+@import '../blocks/footer';

@@ -1,0 +1,133 @@
+.header{
+    padding-top: 46px;
+    &__logo{
+        a{
+            display: block;
+            width: 237px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &__navigation{
+        display: flex;
+        .menu{
+            &.active{
+                display: block;
+            }
+            padding-top: 13px;
+            list-style: none;
+            display: flex;
+            li{
+                margin-right: 65px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    font-weight: 500;
+                    font-size: 22px;
+                    color: #242323;
+                    position: relative;
+                    
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 2px;
+                        width: 0%;
+                        background-color: #242323;
+                        transition: all 0.2s linear;
+                    }
+                    &:hover{
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-btn {
+        display: none;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        z-index:2;
+        overflow: hidden;
+        background-color: #fff;
+        border: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3ctitle%3e2.Menu%3c/title%3e%3cg id='_2.Menu' data-name='2.Menu'%3e%3cpath d='M12,24A12,12,0,1,1,24,12,12.013,12.013,0,0,1,12,24ZM12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Z'/%3e%3crect x='8' y='7' width='8' height='2'/%3e%3crect x='8' y='11' width='8' height='2'/%3e%3crect x='8' y='15' width='8' height='2'/%3e%3c/g%3e%3c/svg%3e");
+        &.active{
+            width: 50px;
+            height: 50px;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm3.707,12.293a1,1,0,1,1-1.414,1.414L12,13.414,9.707,15.707a1,1,0,0,1-1.414-1.414L10.586,12,8.293,9.707A1,1,0,0,1,9.707,8.293L12,10.586l2.293-2.293a1,1,0,0,1,1.414,1.414L13.414,12Z'/%3e%3c/svg%3e");
+        }
+    }
+}
+
+// .menu.active{
+//     display: block;
+// }
+
+
+@media (max-width: 1400px ){
+    .header{
+        .container{
+            flex-direction: row;
+        }
+    }
+}
+
+@media (max-width : 1200px){
+   .header{
+    &__navigation{
+        .menu{
+            display: none;
+            position: absolute;
+            top: 120px;
+            right: 0;
+            background-color: #fff;
+            border: 1px black solid;
+            border-radius: 10px;
+            padding-left: 10px;
+            transition: display 1s linear;
+            z-index: 3;
+            li{
+                margin-bottom: 15px;
+            }
+        }
+        .menu-btn{
+            display: block;
+        }
+    }
+    .button__main{
+        margin-right: 80px;
+    }
+   }
+}
+
+@media (max-width : 600px) {
+    .header{
+        .container{
+            flex-direction: column;
+        }
+        .menu-btn{
+            top: 115px;
+        }
+        &__logo{
+            margin: auto;
+        }
+        .button__main{
+            margin-left: 10px;
+        }
+        &__navigation{
+            .menu{
+                top: 180px;
+            }
+        }
+      
+    }
+}

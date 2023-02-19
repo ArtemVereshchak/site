@@ -1,0 +1,17 @@
+.sponsors{
+    background-color: $main_color;
+    margin-top: 64px;
+    .container{
+        align-items: center;
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 600px){
+    .sponsors{
+        margin-top: 20px;
+        .container{
+            padding: 20px 0;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+.header{
+    &__promo{
+        margin-top: 56px;
+        .container{
+            height: 852px;
+            background: #F4F6F5;
+            border-radius: 59px;
+            padding: 68px 0 0 119px;
+        }
+        &_img{
+            max-width: 500px;
+            max-height: 700px;
+            margin-right: 150px;
+            position: relative;
+            img{
+                width: 100%;
+            }
+            span{
+                position: absolute;
+                width: 58px;
+                height: 56px;
+                content: url(../images/Star.svg);
+                top: 50px;
+                right: 10px;
+                &:nth-child(2){
+                    top: 0;
+                    left: 0;
+                }
+                &:nth-child(3){
+                    top: 400px;
+                    left: -40px;
+                }
+                &:nth-child(4){
+                    top: 550px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    &__descr{
+        h1{
+            max-width: 474px;
+            font-weight: 900;
+            font-size: 96px;
+            line-height: 120px;
+            span{
+                position: relative;
+                z-index: 2;
+                &:nth-child(1){
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: -30px;
+                        width: 465px;
+                        height: 112px; 
+                        background: #FFFFFF;
+                        transform: rotate(-2deg);
+                        z-index: -1;
+                    }
+                }
+                &:nth-child(2){
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: -30px;
+                        top: 10px;
+                        width: 465px;
+                        height: 112px; 
+                        background: $main_color;
+                        transform: rotate(-2deg);
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+        h2{
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 48px;
+            letter-spacing: -0.05em;
+            color: #191818;
+            margin-top: 40px;  
+        }
+        &_items{
+            margin-top: 32px;
+        }
+    }
+}
+
+@media (max-width: 1400px){
+    .header{
+        &__promo{
+            padding: 0 10px;
+            .container{
+                height: max-content;
+            }
+            &_img{
+                margin: auto;
+                padding-top: 50px;
+                max-width: 400px;
+                span{
+                        right: 30px;
+                    &:nth-child(3){
+                        left: 15px;
+                    }
+                    &:nth-child(2){
+                        top: 10px;
+                        left: 20px;
+                    }
+                    &:nth-child(4){
+                        top: 450px;
+                        right: 20px;
+                    }
+                }
+            }
+            overflow: hidden;
+        }
+        &__descr{
+            margin: auto;
+        }
+        
+    }
+}
+
+@media (max-width: 670px){
+    .header{
+        &__promo{
+            margin-top: 30px;
+            .container{
+                padding: 0;
+            }
+        }
+       &__descr{
+        h1{
+            font-size: 50px;
+            max-width: 220px;
+            line-height: 80px;
+            margin: auto;
+            padding-top: 50px;
+            span{
+                &:nth-child(1){
+                    &::after{
+                        width: 220px;
+                        height: 70px;
+                        top: -8px;
+                    }
+                }
+                &:nth-child(2){
+                    &::after{
+                        width: 220px;
+                        height: 70px;
+                      left: -18px;
+                    }
+                }
+            }
+        }
+        h2{
+            font-size: 26px;
+        }
+       }
+    }
+}
+
+@media (max-width: 490px){
+    .header__descr{
+        h2{
+            max-width: 260px;
+            margin: auto;
+        }
+        &_items{
+            img{
+                max-width: 120px;
+            }
+        }
+    }
+}

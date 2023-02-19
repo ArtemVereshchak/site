@@ -1,0 +1,125 @@
+.catalog{
+    margin-top: 70px;
+    .container{
+        flex-direction: column;
+    }
+    &__items{
+        margin-top: 100px;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       align-items: center;
+    }
+    &__item{
+        width: 33%;
+        max-width: 490px;
+        &_descr{
+            margin-top: 28px;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.5s;
+            &-item{
+                h3{
+                    font-weight: 500;
+                    font-size: 32px;
+                    letter-spacing: -0.04em;
+                    color: #191919;
+                }
+                p{
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 50px;
+                    letter-spacing: -0.04em;
+                    color: #7F7F7F;
+                }
+            }
+        }
+        img{
+            width: 100%;
+            transition: all 0.5s;
+            display: block;
+            margin: auto;
+        }
+     
+    }
+
+
+
+&__img{
+position: relative;
+    .buy{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 32px;
+        opacity: 0;
+        z-index: 2;
+        transition: all 0.5s linear;
+    }
+    &:hover{
+        img{
+            filter: blur(2px);
+        }
+        .buy{
+           opacity: 1;
+        }
+    }
+    }
+}
+
+.button__arrow{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border: none;
+    background: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3e%3ctitle%3eArtboard-34%3c/title%3e%3cg id='Right-2' data-name='Right'%3e%3cpolygon points='17.5 5.999 16.793 6.706 22.086 11.999 1 11.999 1 12.999 22.086 12.999 16.792 18.294 17.499 19.001 24 12.499 17.5 5.999' style='fill:%23232326'/%3e%3c/g%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    &:hover{
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3e%3ctitle%3eArtboard-34%3c/title%3e%3cg id='Right-2' data-name='Right'%3e%3cpolygon points='17.5 5.999 16.793 6.706 22.086 11.999 1 11.999 1 12.999 22.086 12.999 16.792 18.294 17.499 19.001 24 12.499 17.5 5.999' style='fill:%23797979'/%3e%3c/g%3e%3c/svg%3e");
+    }
+}
+
+@media (max-width: 1200px){
+    .catalog{
+        &__items{
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: 49%;
+        }
+    }
+}
+
+
+@media (max-width: 800px){
+    .catalog{
+        &__item{
+            &_descr{
+                &-item{
+                    h3{
+                        font-size: 22px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .catalog{
+        &__items{
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        &__item{
+            width: 80%;
+            margin: auto;
+        }
+    }
+}

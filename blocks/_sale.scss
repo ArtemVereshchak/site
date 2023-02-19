@@ -1,0 +1,140 @@
+.sale{
+    margin-top: 190px;
+    background: linear-gradient(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, #E3C743 10.13%, #E4C542 12.98%, #E6C744 15.99%, #E7C845 19.52%, #E5C643 23.96%, #E6C945 30.43%, #E3C743 36.49%, #E9CA48 42.49%, #EDCE49 49.35%, #F0D44C 55.42%, #F4D84F 61.43%, #F6DA52 65.74%, #F7DB53 72.23%, #F9DD55 77.43%, #F9DF56 83.84%, #FAE157 91.52%, #F9DF56 97.87%);
+    max-height: 968px;
+    overflow: hidden;
+    .container{
+        max-width: 100vw;
+        .left, .right{
+            width: 50%;
+        }
+    }
+    
+    .left{
+       // max-width: 900px;
+        img{
+            width: 100%;
+        }
+    }
+    .right{
+        padding: 115px 0 155px 0;
+        h2{
+            font-weight: 900;
+            font-size: 112px;
+            line-height: 137px;
+            max-width: 594px;
+            text-align: center;
+            margin: auto;
+            span{
+                z-index: 1;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: -30px;
+                    width: 110%;
+                    height: 80%; 
+                    background: #FFFFFF;
+                    transform: rotate(-2deg);
+                    z-index: -1;
+                }
+            }
+        }
+        p{
+            max-width: 594px;
+            padding: 30px 0 30px 0;
+            margin: auto;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 52px;
+            letter-spacing: -0.02em;
+            color: #231300;
+            span{
+                font-weight: 700;
+                color: #000000; 
+            }
+        }
+        .button__main{
+            margin: auto;
+            display: block;
+            width: 265px;
+        }
+    }
+}
+
+@media(max-width: 1400px){
+.sale{
+    margin-top: 100px;
+    .container{
+        flex-direction: row;
+    }
+    max-height: max-content;
+    .left, .right{
+        margin: auto;
+    }
+    .left{
+        max-width: 400px;
+    }
+}
+}
+
+@media (max-width: 1100px){
+    .sale{
+        margin-top: 50px;
+        .container{
+            flex-direction: column-reverse;
+        }
+        .right{
+            padding: 50px 0 10px 0;
+            h2{
+                font-size: 90px;
+                line-height: 90px;
+                span{
+                    margin: auto;
+                    &::after{
+                        width: 450px;
+                        height: 101px;
+                        top: 0;
+                    }
+                }
+            }
+            p{
+                font-size: 18px;
+                padding-top: 10px;
+                text-align: center;
+                max-width: 380px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+@media(max-width: 840px){
+    .sale{
+        .right{
+            h2{
+                font-size: 50px;
+                max-width: 340px;
+                span{
+                    &::after{
+                        width: 280px;
+                        height: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 600px){
+    .sale{
+        .right{
+            h2{
+                line-height: 60px;
+            }
+            .button__main{
+                width: 200px;
+            }
+        }
+    }
+}
